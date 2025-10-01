@@ -12,3 +12,50 @@ El objetivo es implementar un **Análisis Exploratorio de Datos (EDA)** mínimo 
 - Documentar hallazgos clave que afecten el preprocesamiento o el modelado posterior.
 
 ## Estructura del proyecto
+EDA_Grupal/
+├── data/ # Dataset CSV
+├── outputs/ # Gráficos y resultados del análisis
+├── src/ # Código principal (clase EDA)
+├── tests/ # Pruebas unitarias con pytest
+├── main.py # Script para ejecutar el flujo completo
+├── requirements.txt # Dependencias del proyecto
+└── README.md # Este archivo
+
+## Tecnologías utilizadas
+- Python 3.10+  
+- pandas  
+- matplotlib  
+- pytest  
+
+## Cómo ejecutar
+1.Clonar este repositorio:  
+    bash
+    git clone https://github.com/tuusuario/eda-grupal-ml.git
+    cd eda-grupal-ml
+   
+2.Crear entorno virtual e instalar dependencias:
+
+    python -m venv venv
+    .\venv\Scripts\activate   # Windows
+    pip install -r requirements.txt
+
+
+3. Colocar el dataset en la carpeta data/.
+
+4. Ejecutar el análisis completo:
+    python main.py
+
+## Tests
+
+Ejecuta los tests con:
+    pytest -q
+
+## Resultados
+
+- Tabla de calidad de columnas (valores faltantes, tipos, cardinalidad).
+
+- Descriptivos de numéricas y top categorías de texto.
+
+- Distribución de la variable objetivo con gráfico y cálculo de IR.
+
+- Gráficos en outputs/: histogramas, boxplots, barras de la variable objetivo.
