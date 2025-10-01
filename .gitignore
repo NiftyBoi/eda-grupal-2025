@@ -1,0 +1,42 @@
+# ---- Entorno virtual ----
+venv/
+ENV/
+env/
+.venv/
+
+# ---- Archivos temporales de Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg
+*.egg-info/
+*.manifest
+*.spec
+
+# ---- Archivos de Jupyter ----
+.ipynb_checkpoints/
+*.ipynb_save
+
+# ---- Archivos de sistema ----
+.DS_Store
+Thumbs.db
+
+# ---- Archivos de IDE ----
+.vscode/
+.idea/
+
+# ---- Archivos de logs ----
+*.log
+
+# ---- Carpeta de resultados ----
+outputs/
+
+# ---- Dependencias instaladas localmente ----
+*.sqlite3
+
+# ---- Archivos ocultos de OS o Python ----
+*.coverage
+.cache/
+.pytest_cache/
