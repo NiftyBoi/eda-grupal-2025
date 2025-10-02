@@ -43,6 +43,25 @@ class EDA:
         print(resumen)
 
         return resumen
+    
+    def agregar_columna_fase(self):
+        """Crea una nueva columna 'FASE_ASIGNADA' indicando la fase principal de cada fila."""
+        if self.df is None:
+            raise ValueError("Primero carga el CSV con cargar_csv()")
+
+        self.df["FASE_ASIGNADA"] = self.df.apply(
+            lambda row: "F1" if pd.notnull(row["F1"]) and str(row["F1"]).strip() != "" else
+                        "F2" if pd.notnull(row["F2"]) and str(row["F2"]).strip() != "" else
+                        "F3" if pd.notnull(row["F3"]) and str(row["F3"]).strip() != "" else
+                        "NINGUNA",
+            axis=1
+        )
+
+        print("\nColumna 'FASE_ASIGNADA' creada correctamente.")
+        print(self.df[["DESCRIPCION", "F1", "F2", "F3", "FASE_ASIGNADA"]].head(10))
+
+        return self.df["FASE_ASIGNADA"]
+
 
     def descriptivos(self, top_n=10):
         """Muestra descriptivos numéricos y top categorías."""

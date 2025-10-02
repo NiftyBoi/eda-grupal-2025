@@ -7,6 +7,9 @@ if __name__ == "__main__":
         eda.resumen_columnas()
         eda.descriptivos()
 
+        # Nueva columna derivada
+        eda.agregar_columna_fase()
+
         # Análisis de fases
         resultados = eda.analizar_fases()
 
